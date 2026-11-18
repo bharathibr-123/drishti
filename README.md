@@ -6,7 +6,7 @@
 
 **Find a missing person in hours of multi-camera CCTV in seconds, from a description in English or Kannada, or a family photo, and get an alert the moment they walk past a live camera. No face recognition.**
 
-[![CI](https://github.com/YOUR-USERNAME/drishti/actions/workflows/ci.yml/badge.svg)](https://github.com/YOUR-USERNAME/drishti/actions/workflows/ci.yml)
+[![CI](https://github.com/bharathibr-123/drishti/actions/workflows/ci.yml/badge.svg)](https://github.com/bharathibr-123/drishti/actions/workflows/ci.yml)
 ![Python](https://img.shields.io/badge/python-3.10%E2%80%933.12-blue)
 ![mypy](https://img.shields.io/badge/mypy-strict-success)
 ![License](https://img.shields.io/badge/license-AGPL--3.0-informational)
@@ -99,7 +99,7 @@ flowchart LR
 Needs **Python 3.10–3.12** and about 3 GB of disk space.
 
 ```bash
-git clone https://github.com/YOUR-USERNAME/drishti.git && cd drishti
+git clone https://github.com/bharathibr-123/drishti.git && cd drishti
 python -m venv .venv
 .venv\Scripts\activate            # Windows   (macOS/Linux: source .venv/bin/activate)
 pip install -r requirements.txt
