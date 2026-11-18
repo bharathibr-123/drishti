@@ -1,0 +1,25 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      # Unit tests cover the pure logic (query parsing, Kannada, scoring, trail, privacy),
+      # so CI needs only light dependencies - no PyTorch or model downloads.
+      - name: Install
+        run: pip install -r requirements-ci.txt
+      - name: Lint (ruff)
+        run: ruff check . && ruff format --check .
+      - name: Type-check (mypy --strict)
+        run: mypy
+      - name: Unit tests
+        run: pytest -q

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Drishti · Describe them. We'll find them.</title>
+<link rel="stylesheet" href="/static/styles.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ccircle cx=%2250%22 cy=%2250%22 r=%2240%22 fill=%22%23ffb020%22/%3E%3Ccircle cx=%2250%22 cy=%2250%22 r=%2216%22 fill=%22%230b0f14%22/%3E%3C/svg%3E">
+</head>
+<body>
+<header>
+  <div class="logo"><b><span class="kn">ದೃಷ್ಟಿ</span> Drishti</b><span>Describe them. We'll find them.</span></div>
+  <div class="stats">
+    <div class="pill"><strong id="nCams">–</strong> cameras</div>
+    <div class="pill"><strong id="nPeople">–</strong> people indexed</div>
+    <div class="pill priv" id="privPill">● Faces blurred</div>
+  </div>
+</header>
+
+<main>
+  <section>
+    <div class="card">
+      <div class="case">
+        <label>Officer<input type="text" id="officer" value="MYS-PSI-2041" autocomplete="off"></label>
+        <label>Case reference<input type="text" id="reason" value="Missing person report #DSR-118" autocomplete="off"></label>
+      </div>
+      <div class="searchrow">
+        <input type="text" id="q" placeholder="Describe the person in English or ಕನ್ನಡ… e.g. a woman in a white t-shirt with red flowers" autofocus>
+        <button class="btn" id="lang" title="Voice language">EN</button>
+        <button class="btn icon" id="mic" title="Speak the description">🎙</button>
+        <label class="btn icon" title="Search with a photo">📷<input type="file" id="photo" accept="image/*" hidden></label>
+        <img id="photoPreview" alt="Photo being searched" title="Click to remove">
+        <button class="btn primary" id="go">Search</button>
+        <button class="btn watch" id="watch" title="Alert me when this person appears on a live camera">🔔 Watch live</button>
+      </div>
+      <div class="chips" id="chips"></div>
+    </div>
+
+    <div class="meta" id="meta"></div>
+    <div class="grid" id="grid">
+      <div class="empty"><b>Every minute counts.</b>Type or speak what the person was wearing or carrying, in English or Kannada, or upload a photo from the family's phone.</div>
+    </div>
+  </section>
+
+  <aside class="side">
+    <div class="card">
+      <h3>Movement trail</h3>
+      <svg id="map" viewBox="0 0 100 80" role="img" aria-label="Site map with the person's movement trail"></svg>
+      <div id="last"></div>
+      <div class="tl" id="tl"></div>
+    </div>
+
+    <div class="card">
+      <div class="h3row"><h3>Live watch</h3><button class="btn small" id="liveToggle">Show live feed</button></div>
+      <div id="liveFeeds"></div>
+      <div id="watchList" class="note">No active watches. Search for someone, then press 🔔 Watch live.</div>
+      <div id="alerts"></div>
+    </div>
+
+    <div class="card">
+      <h3>Accountability log</h3>
+      <div class="audit" id="audit">No activity yet.</div>
+    </div>
+  </aside>
+</main>
+
+<div id="toast" role="alert"></div>
+
+<dialog id="dlg">
+  <div class="dlg">
+    <div>
+      <img class="frame" id="dFrame" alt="Context frame">
+      <video id="dVideo" controls muted></video>
+      <div class="row">
+        <button class="btn" id="dPlay">▶ Review footage at this moment</button>
+        <button class="btn rec" id="dReveal">Unblur face (logged)</button>
+        <button class="btn" id="dClose">Close</button>
+      </div>
+      <div class="note">Raw footage and unblurred faces are only shown against a case reference. Every view is written to the accountability log.</div>
+    </div>
+    <div>
+      <img class="crop" id="dCrop" alt="Person">
+      <div class="dcam" id="dCam"></div>
+      <div class="dtime" id="dTime"></div>
+      <h4>Also seen on other cameras</h4>
+      <div id="dSimilar" class="similar"></div>
+    </div>
+  </div>
+</dialog>
+
+<script src="/static/app.js"></script>
+</body>
+</html>

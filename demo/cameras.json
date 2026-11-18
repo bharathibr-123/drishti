@@ -1,0 +1,11 @@
+[
+  {"id": "CAM-01", "name": "Main Gate", "video": "videos/people-detection.mp4", "start_time": "-00:15:00", "x": 12, "y": 66},
+  {"id": "CAM-02", "name": "Entry Corridor", "video": "videos/face-demographics-walking.mp4", "start_time": "-00:14:00", "x": 28, "y": 48},
+  {"id": "CAM-03", "name": "Exhibition Hall A", "video": "videos/one-by-one-person-detection.mp4", "start_time": "-00:13:00", "x": 46, "y": 20},
+  {"id": "CAM-04", "name": "Stalls Aisle", "video": "videos/store-aisle-detection.mp4", "start_time": "-00:11:00", "x": 70, "y": 40},
+  {"id": "CAM-05", "name": "Service Yard", "video": "videos/worker-zone-detection.mp4", "start_time": "-00:10:00", "x": 88, "y": 16},
+  {"id": "CAM-06", "name": "Hall B", "video": "videos/classroom.mp4", "start_time": "-00:09:00", "x": 88, "y": 64},
+  {"id": "CAM-07", "name": "Food Court", "video": "videos/face-demographics-walking-and-pause.mp4", "start_time": "-00:05:00", "x": 50, "y": 56},
+  {"id": "CAM-08", "name": "Parking", "video": "videos/person-bicycle-car-detection.mp4", "start_time": "-00:16:00", "x": 10, "y": 24},
+  {"id": "CAM-09", "name": "Help Desk", "video": "videos/head-pose-face-detection-female-and-male.mp4", "x": 68, "y": 72, "live": true}
+]

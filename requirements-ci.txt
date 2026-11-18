@@ -1,0 +1,11 @@
+# Light dependencies for lint, type-check and unit tests (no PyTorch / models).
+numpy>=1.26
+opencv-python-headless>=4.9
+pillow>=10
+fastapi>=0.110
+python-multipart
+pydantic>=2
+pytest>=8
+mypy>=1.10
+ruff>=0.5
+httpx

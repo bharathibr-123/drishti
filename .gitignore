@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.venv/
+data/
+weights/*.pt
+demo/videos/*.mp4
+demo/my_footage/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.part

@@ -1,0 +1,48 @@
+[project]
+name = "drishti"
+version = "1.0.0"
+description = "Find a missing person in multi-camera CCTV footage from a description or a photo, without face recognition."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "AGPL-3.0-or-later" }
+dependencies = [
+    "numpy>=1.26",
+    "opencv-python>=4.9",
+    "pillow>=10",
+    "torch>=2.2",
+    "torchvision",
+    "open_clip_torch>=2.24",
+    "ultralytics>=8.3",
+    "lap>=0.5",
+    "faiss-cpu>=1.8",
+    "fastapi>=0.110",
+    "uvicorn[standard]",
+    "python-multipart",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "httpx", "mypy>=1.10", "ruff>=0.5"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM", "RUF"]
+ignore = ["RUF001", "RUF002", "RUF003"]  # Kannada text and ↔ arrows are intentional
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+ignore_missing_imports = true
+warn_return_any = false
+disallow_untyped_calls = false
+files = ["drishti", "app"]
+
+[[tool.mypy.overrides]]
+module = ["cv2.*", "ultralytics.*", "open_clip.*", "faiss.*", "torch.*"]
+follow_imports = "skip"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

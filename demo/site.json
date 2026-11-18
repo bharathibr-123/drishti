@@ -1,0 +1,6 @@
+{
+  "name": "Demo venue",
+  "links": [["CAM-08", "CAM-01"], ["CAM-01", "CAM-02"], ["CAM-02", "CAM-03"], ["CAM-02", "CAM-07"],
+            ["CAM-07", "CAM-04"], ["CAM-03", "CAM-04"], ["CAM-04", "CAM-05"], ["CAM-04", "CAM-06"],
+            ["CAM-07", "CAM-09"], ["CAM-09", "CAM-06"]]
+}

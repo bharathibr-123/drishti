@@ -1,0 +1,13 @@
+torch>=2.2
+torchvision
+open_clip_torch>=2.24
+ultralytics>=8.3
+lap>=0.5
+faiss-cpu>=1.8
+fastapi>=0.110
+uvicorn[standard]
+python-multipart
+opencv-python
+pillow
+numpy
+pytest
